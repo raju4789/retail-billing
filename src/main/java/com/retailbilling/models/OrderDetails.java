@@ -2,38 +2,64 @@ package com.retailbilling.models;
 
 import java.util.List;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-@Entity
-@Table(name = "order_details")
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter
-@Setter
 public class OrderDetails {
-	
-	@Id
-	@Column(name= "order_id")
-	private String orderId;
-	
 	
 	@NotNull
 	@NotEmpty
-	@Column(name= "user_id")
+	private String orderId;
+	
+	@NotNull
+	@NotEmpty
 	private String userId;
 	
 	@NotNull
-	@NotEmpty
 	private List<Item> items;
 	
+	
+
+	public OrderDetails() {
+		super();
+	}
+
+	public OrderDetails(@NotNull @NotEmpty String orderId, @NotNull @NotEmpty String userId,
+			@NotNull List<Item> items) {
+		super();
+		this.orderId = orderId;
+		this.userId = userId;
+		this.items = items;
+	}
+
+	public String getOrderId() {
+		return orderId;
+	}
+
+	public void setOrderId(String orderId) {
+		this.orderId = orderId;
+	}
+
+	public String getUserId() {
+		return userId;
+	}
+
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+
+	public List<Item> getItems() {
+		return items;
+	}
+
+	public void setItems(List<Item> items) {
+		this.items = items;
+	}
+
+	@Override
+	public String toString() {
+		return "OrderDetails [orderId=" + orderId + ", userId=" + userId + ", items=" + items + "]";
+	}
+		
 }
