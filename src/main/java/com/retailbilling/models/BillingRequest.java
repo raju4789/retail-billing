@@ -6,7 +6,7 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
 
-public class OrderDetails {
+public class BillingRequest {
 	
 	@NotNull
 	@NotEmpty
@@ -21,11 +21,11 @@ public class OrderDetails {
 	
 	
 
-	public OrderDetails() {
+	public BillingRequest() {
 		super();
 	}
 
-	public OrderDetails(@NotNull @NotEmpty String orderId, @NotNull @NotEmpty String userId,
+	public BillingRequest(@NotNull @NotEmpty String orderId, @NotNull @NotEmpty String userId,
 			@NotNull List<Item> items) {
 		super();
 		this.orderId = orderId;

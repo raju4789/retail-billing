@@ -1,13 +1,17 @@
 package com.retailbilling.services;
 
-import com.retailbilling.models.OrderDetails;
+import org.springframework.stereotype.Service;
 
+import com.retailbilling.models.BillingRequest;
+import com.retailbilling.models.BillingResponse;
+
+@Service
 public class BillingService implements IBillingService {
 	
 	@Override
-	public double generateBill(OrderDetails orderDetails) {
+	public BillingResponse generateBill(BillingRequest billingRequest) {
 		// TODO Auto-generated method stub
-		return 0;
+		return null;
 	}
 
 }

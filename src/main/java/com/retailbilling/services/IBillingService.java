@@ -1,12 +1,11 @@
 package com.retailbilling.services;
 
-import org.springframework.stereotype.Service;
+import com.retailbilling.models.BillingRequest;
+import com.retailbilling.models.BillingResponse;
 
-import com.retailbilling.models.OrderDetails;
 
-@Service
 public interface IBillingService {
 	
-	public double generateBill(OrderDetails orderDetails);
+	public BillingResponse generateBill(BillingRequest billingRequest);
 	
 }
