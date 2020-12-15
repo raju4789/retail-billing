@@ -101,7 +101,7 @@ Project built to apply discounts on user bill.
 
 **NOTE:** Few more sample requests are in docs folder.
 
-# ER diagram:
+# Relation between key entities:
 
  ![image.png](docs/ER_Diagram.png)<br><br>
 
