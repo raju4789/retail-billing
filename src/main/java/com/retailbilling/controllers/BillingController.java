@@ -11,9 +11,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.retailbilling.exceptions.ResourceNotFoundException;
 import com.retailbilling.models.BillingRequest;
 import com.retailbilling.models.BillingResponse;
-import com.retailbilling.services.IBillingService;
+import com.retailbilling.services.BillingService;
+
+import io.swagger.annotations.ApiOperation;
 
 @RestController
 @RequestMapping("/api/v1")
@@ -21,10 +24,11 @@ import com.retailbilling.services.IBillingService;
 public class BillingController {
 	
 	@Autowired
-	private IBillingService billingService;
+	private BillingService billingService;
 	
 	@PostMapping("/billing")
-	public ResponseEntity<BillingResponse> generateBill(@RequestBody @Valid BillingRequest billingRequest){
+	@ApiOperation(value = "generate bill from order details", response = BillingResponse.class)
+	public ResponseEntity<BillingResponse> generateBill(@RequestBody @Valid BillingRequest billingRequest) throws ResourceNotFoundException{
 		
 		BillingResponse billingResponse = billingService.generateBill(billingRequest);
 		

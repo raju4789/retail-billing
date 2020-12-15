@@ -5,7 +5,9 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
+import io.swagger.annotations.ApiModel;
 
+@ApiModel
 public class Item {
 	
 	@NotBlank(message = "product id is mandatory")

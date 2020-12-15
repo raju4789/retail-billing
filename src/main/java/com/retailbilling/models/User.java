@@ -8,8 +8,11 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
+import io.swagger.annotations.ApiModel;
+
 @Entity
 @Table(name = "user")
+@ApiModel
 public class User {
 
 	@Id

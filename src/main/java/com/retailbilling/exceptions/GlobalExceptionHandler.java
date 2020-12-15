@@ -39,19 +39,6 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 		return new ResponseEntity<>(apiError, new HttpHeaders(), apiError.getStatus());
 	}
 
-	@ExceptionHandler(value = InvalidRequestException.class)
-	public ResponseEntity<Object> handleInvalidRequestException(InvalidRequestException e) {
-		APIError apiError = new APIError();
-
-		apiError.setStatus(HttpStatus.BAD_REQUEST);
-
-		List<String> errors = new ArrayList<>();
-		errors.add(e.getMessage());
-		apiError.setErrors(errors);
-
-		return new ResponseEntity<>(apiError, new HttpHeaders(), apiError.getStatus());
-	}
-
 	@Override
 	protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex,
 			HttpHeaders headers, HttpStatus status, WebRequest request) {

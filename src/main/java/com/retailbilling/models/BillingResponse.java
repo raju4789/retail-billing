@@ -1,5 +1,8 @@
 package com.retailbilling.models;
 
+import io.swagger.annotations.ApiModel;
+
+@ApiModel
 public class BillingResponse {
 
 	private String orderId;

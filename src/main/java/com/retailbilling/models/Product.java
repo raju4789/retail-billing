@@ -9,8 +9,11 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
+import io.swagger.annotations.ApiModel;
+
 @Entity
 @Table(name = "product")
+@ApiModel
 public class Product {
 
 	@Id
