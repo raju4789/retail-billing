@@ -34,13 +34,13 @@ class DataLoadListener implements ApplicationListener<ApplicationReadyEvent> {
 			User user = new User("ab1d4f67-3b65-4222-a3f7-cfe603f1859a", "Raju", "EMPLOYEE", accountCreatedOn);
 			userRepository.save(user);
 
-			new User("08b9009d-9669-4e8b-85fe-4be50f5b6ec9", "Ram", "AFFILIATE", accountCreatedOn);
+			user = new User("08b9009d-9669-4e8b-85fe-4be50f5b6ec9", "Ram", "AFFILIATE", accountCreatedOn);
 			userRepository.save(user);
 
-			new User("9f66fb0f-9fae-41ab-9727-f6e683ed94a8", "Rahul", "CUSTOMER", accountCreatedOn);
+			user = new User("9f66fb0f-9fae-41ab-9727-f6e683ed94a8", "Rahul", "CUSTOMER", accountCreatedOn);
 			userRepository.save(user);
 
-			new User("6e1869a2-0340-4d3c-a17d-b54c41fd2b7c", "Rahim", "CUSTOMER", "2015-12-14");
+			user = new User("6e1869a2-0340-4d3c-a17d-b54c41fd2b7c", "Rahim", "CUSTOMER", "2015-12-14");
 			userRepository.save(user);
 
 			log.info("Loading product data...");
@@ -55,7 +55,7 @@ class DataLoadListener implements ApplicationListener<ApplicationReadyEvent> {
 			
 			productCategory = "ELECTRONICS";
 			
-			product = new Product("6ad0a278-8cc9-460d-bea5-7607ea9f0399", "iPhone", "", productCategory, 9800000);
+			product = new Product("6ad0a278-8cc9-460d-bea5-7607ea9f0399", "iPhone", "", productCategory, 50);
 			productRepository.save(product);
 			
 			product = new Product("97dde3e7-9437-4410-a121-53ba186f0112", "dell laptop", "", productCategory, 6800000);
