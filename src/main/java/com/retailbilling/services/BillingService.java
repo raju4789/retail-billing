@@ -10,7 +10,9 @@ public class BillingService implements IBillingService {
 	
 	@Override
 	public BillingResponse generateBill(BillingRequest billingRequest) {
-		// TODO Auto-generated method stub
+		final String orderId = billingRequest.getOrderId();
+		final String userId = billingRequest.getUserId();
+		
 		return null;
 	}
 

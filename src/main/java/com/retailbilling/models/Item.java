@@ -1,17 +1,17 @@
 package com.retailbilling.models;
 
 import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
 
 public class Item {
 	
-	@NotNull
-	@NotEmpty
+	@NotBlank(message = "product id is mandatory")
 	private String productId;
 	
-	@Min(1)
+	@Min(value = 1, message = "product quantity should be min of 1")
 	private int quantity;
 	
 	

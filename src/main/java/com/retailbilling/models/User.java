@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
@@ -15,16 +16,13 @@ public class User {
 	@Column(name = "user_id")
 	private String userId;
 
-	@NotNull
-	@NotEmpty
+	@NotBlank(message = "user name is mandatory")
 	private String name;
 
-	@NotNull
-	@NotEmpty
+	@NotBlank(message = "user role is mandatory")
 	private String role;
 
-	@NotNull
-	@NotEmpty
+	@NotBlank(message = "account created on field is mandatory")
 	@Column(name = "account_created_on")
 	private String accountCreatedOn;
 	

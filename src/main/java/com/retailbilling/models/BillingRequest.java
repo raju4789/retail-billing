@@ -2,24 +2,20 @@ package com.retailbilling.models;
 
 import java.util.List;
 
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
-
 public class BillingRequest {
-	
-	@NotNull
-	@NotEmpty
+
+	@NotBlank(message = "order id is mandatory")
 	private String orderId;
-	
-	@NotNull
-	@NotEmpty
+
+	@NotBlank(message = "user id is mandatory")
 	private String userId;
-	
-	@NotNull
+
+	@NotEmpty(message = "billing items can't be empty")
 	private List<Item> items;
-	
-	
 
 	public BillingRequest() {
 		super();
@@ -61,5 +57,5 @@ public class BillingRequest {
 	public String toString() {
 		return "OrderDetails [orderId=" + orderId + ", userId=" + userId + ", items=" + items + "]";
 	}
-		
+
 }

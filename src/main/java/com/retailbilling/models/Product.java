@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
@@ -16,17 +17,15 @@ public class Product {
 	@Column(name = "product_id")
 	private String productId;
 
-	@NotNull
-	@NotEmpty
+	@NotBlank(message = "product name is mandatory")
 	private String name;
 
 	private String description;
 
-	@NotNull
-	@NotEmpty
+	@NotBlank(message = "product category is mandatory")
 	private String category;
 
-	@Min(1)
+	@Min(value = 1, message = "price value can't be zero or below")
 	private double price;
 
 	public Product() {
