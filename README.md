@@ -4,10 +4,10 @@ Project built to apply discounts on user bill.
 
 # Key Features:
 
-1. SonarQube report for the code quality summary and covearage.
-2. Junit5 and Mockito for unit testing.
-3. Swagger UI Documentation.
-4. @RestControllerAdvice for Global Exception handling.
+1. **SonarQube** report for the code quality summary and covearage.
+2. **Junit5 and Mockito** for unit testing.
+3. **Swagger** UI Documentation.
+4. **RestControllerAdvice** for Global Exception handling.
 5. spring-validation to validate request and response.
 6. Code written following industry standards(whereever applicable).
 7. Last but not least, nearly production ready code.
