@@ -55,15 +55,15 @@ Project built to apply discounts on user bill.
 
  ## Build project with sonarqube:
  ```
-
  mvn clean install sonar:sonar -Dsonar.login={username} -Dsonar.password={password}
  ```
 
  ![image.png](docs/Sonar_Scan.png)<br><br>
 
  ## Run project:
-
+```
  mvn spring-boot:run
+ ```
 
 
  # Swagger UI Docs:
