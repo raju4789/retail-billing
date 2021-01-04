@@ -45,13 +45,18 @@ Project built to apply discounts on user bill.
  ## Build project :
 
  From root directory of code,
+
+
+ **1. with test cases :** 
+ ```
+ mvn clean install 
  ```
 
- **1. with test cases** : mvn clean install 
-
- **2. without test cases** : mvn clean install -DskipTests
-
+ **2. without test cases :**
  ```
+ mvn clean install -DskipTests
+ ```
+
 
  ## Build project with sonarqube:
  ```
